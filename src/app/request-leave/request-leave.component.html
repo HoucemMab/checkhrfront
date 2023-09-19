@@ -1,0 +1,61 @@
+<div class="request-leave-container">
+  <div>
+    <h3 class="form-title">Leave Request</h3>
+
+    <!-- Leave Request Form -->
+    <div class="leave-form">
+      <form>
+        <!-- Time Period Input -->
+        <div class="form-group">
+          <label for="timePeriod">Time Period</label>
+          <input
+            type="text"
+            id="timePeriod"
+            name="timePeriod"
+            placeholder="e.g., Morning, Afternoon, 2 Days"
+            [(ngModel)]="time"
+          />
+        </div>
+
+        <!-- Date Input -->
+        <div class="form-group">
+          <label for="leaveDate">Date</label>
+          <input
+            type="date"
+            id="leaveDate"
+            name="leaveDate"
+            [(ngModel)]="date"
+          />
+        </div>
+
+        <!-- Specifications Textarea -->
+        <div class="form-group">
+          <label for="specifications">Specifications</label>
+          <textarea
+            id="specifications"
+            name="specifications"
+            rows="4"
+            placeholder="Enter leave details"
+            [(ngModel)]="specifications"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button class="submit-button" type="submit" (click)="onSubmit()">
+            Submit
+          </button>
+        </div>
+      </form>
+      <div *ngIf="message" class="submission-status">
+        <div class="status-box">
+          <p class="status-text">{{ this.message }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- App Meeting Component -->
+  <div class="app-meeting">
+    <app-meeting></app-meeting>
+  </div>
+</div>

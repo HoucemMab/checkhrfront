@@ -1,0 +1,61 @@
+<div class="leaves-container">
+  <div>
+    <h3 class="leave-title">Training Requests</h3>
+
+    <div *ngFor="let train of training" class="leave-box">
+      <table class="leave-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="avatar">
+                <img src="assets/avatar.png" class="image" />
+                <span>{{ train.user.fullName }} </span>
+              </div>
+            </th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Course name</th>
+            <th>Course Size</th>
+            <th>Chapters</th>
+
+            <th>Aprove</th>
+            <th>Decline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rq">Requested a training</span></td>
+            <td>{{ train.user.department }}</td>
+            <td>{{ train.user.status }}</td>
+            <td>{{ train.coursename }}</td>
+            <td>{{ train.coursesize }}</td>
+            <td>{{ train.numchapters }}</td>
+
+            <!-- <td></td> -->
+            <td class="approve">
+              <button
+                class="approve-button"
+                (click)="approveRequest(train.id_request)"
+              >
+                <i class="fas fa-check-circle"></i>
+                <!-- Font Awesome check-circle icon -->
+              </button>
+            </td>
+            <td class="decline">
+              <button
+                class="decline-button"
+                (click)="declineRequest(train.id_request)"
+              >
+                <i class="fas fa-times-circle"></i>
+                <!-- Font Awesome times-circle icon -->
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="meeting">
+    <app-meeting></app-meeting>
+  </div>
+</div>

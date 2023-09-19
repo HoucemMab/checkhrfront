@@ -1,0 +1,35 @@
+<div class="note-container">
+  <div class="note">
+    <div class="note-input">
+      <p class="note-label">Note</p>
+      <textarea
+        class="note-textarea"
+        placeholder="Write your note here..."
+        [(ngModel)]="newNote"
+      ></textarea>
+      <div class="button">
+        <button class="note-button" (click)="addNote()">Submit</button>
+      </div>
+      <div class="notification" *ngIf="notificationMessage">
+        {{ notificationMessage }}
+      </div>
+    </div>
+    <div class="note-list">
+      <h1 class="title">Notes</h1>
+      <div class="note-item" *ngFor="let note of notes.reverse()">
+        <div class="note-header">
+          <img class="note-avatar" src="assets/avatar.png" alt="User Avatar" />
+          <div class="note-info">
+            <span class="note-name">{{ note.user.fullName }}</span>
+          </div>
+        </div>
+        <div class="note-data">{{ note.content }}</div>
+        <span class="note-date">{{ note.date | date : "dd/MM/yyyy" }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="meetings">
+    <!-- Include your MeetingsComponent here -->
+    <app-meeting></app-meeting>
+  </div>
+</div>

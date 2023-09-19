@@ -1,0 +1,54 @@
+.sidebar {
+  width: 238px;
+  height: 100%;
+  flex-shrink: 0;
+  background: #fff; /* Set the background color of the sidebar */
+  display: flex;
+  flex-direction: column; /* Display items vertically */
+  align-items: center; /* Horizontally center items */
+  border-right: 1px solid #ddd; /* Add a right border */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.sidebar .sidebar-item {
+  display: flex;
+  width: 100%;
+  padding: 16px 0; /* Adjust vertical padding */
+  align-items: center;
+  gap: 24px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: #797979; /* Set text color to white */
+  text-decoration: none;
+  transition: background-color 0.3s; /* Add smooth transition for background color */
+  border-radius: 10px; /* Add border-radius */
+}
+
+.sidebar .sidebar-item i {
+  font-size: 20px;
+}
+
+/* Style links */
+.sidebar .sidebar-item a {
+  color: #797979; /* Set the link text color to #797979 */
+  text-decoration: none;
+  display: block; /* Make the link take up the entire width */
+  padding: 0 24px; /* Add padding to fill the space */
+}
+
+/* Style links on hover */
+.sidebar .sidebar-item:hover {
+  background: #4a96ff; /* Change the background color on hover */
+  color: #fff;
+}
+
+/* Remove text color change on hover */
+.sidebar .sidebar-item:hover a {
+  color: inherit; /* Inherit the color from the parent (white) */
+}

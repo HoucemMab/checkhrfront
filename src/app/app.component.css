@@ -1,0 +1,16 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: auto;
+}
+
+.under-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styles for the main content area */
+.main-content {
+  flex-grow: 1; /* Allow content to grow and fill available space */
+}

@@ -1,0 +1,56 @@
+<div class="admin-events-container">
+  <h2 class="page-title">Admin Events</h2>
+  <div class="event-form">
+    <h3 class="form-title">Event Details</h3>
+    <form (ngSubmit)="submitEvent()">
+      <div class="first-line">
+        <div>
+          <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input
+              type="text"
+              id="eventName"
+              [(ngModel)]="eventName"
+              name="eventName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="eventDate">Event Date</label>
+            <input
+              type="date"
+              id="eventDate"
+              [(ngModel)]="eventDate"
+              name="eventDate"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group" clas="objective">
+          <label for="eventObjective">Objective</label>
+          <input
+            type="text"
+            id="eventObjective"
+            [(ngModel)]="eventObjective"
+            name="eventObjective"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="eventContent">Event Content</label>
+        <textarea
+          id="eventContent"
+          [(ngModel)]="eventContent"
+          name="eventContent"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+  <app-events></app-events>
+</div>

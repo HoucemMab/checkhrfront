@@ -1,0 +1,123 @@
+/* dashboard.component.css */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+}
+
+.dashboard-box {
+  height: 150px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  width: calc(28.333% - 20px);
+}
+
+.dashboard-box h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.dashboard-box p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5128a7;
+}
+
+.dashboard-box a {
+  font-size: 14px;
+  color: #5128a7;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.dashboard-box .shape {
+  width: 25.243px;
+  height: 25.243px;
+  flex-shrink: 0;
+  fill: #5128a7;
+  align-self: flex-end;
+}
+
+.dashboard-table {
+  flex-grow: 1;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 65%;
+  margin-left: 20px;
+}
+
+.dashboard-table h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.dashboard-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.dashboard-table th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+.dashboard-table td {
+  font-size: 14px;
+  color: #333333;
+}
+
+/* Adjust the styles as needed for other boxes and elements */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+.subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.meeting-container {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.see-more {
+  display: flex;
+  flex-direction: row;
+}

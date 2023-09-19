@@ -1,0 +1,29 @@
+<div class="meeting-container">
+  <div class="sidebar">
+    <div class="agenda">
+      <div class="calendar-container">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    </div>
+    <div class="schedule-title">
+      <span>Schedule</span>
+    </div>
+    <div class="meeting-list">
+      <!-- Iterate through a fake data array and display meeting cards -->
+      <div class="meeting-card" *ngFor="let meeting of meetings">
+        <div class="meeting-header">
+          <div class="meeting-title">{{ meeting.event_name }}</div>
+          <div class="meeting-hours">
+            {{ meeting.time | date : "dd/MM/yyyy" }}
+          </div>
+        </div>
+        <div class="meeting-description">
+          {{ meeting.content }}
+        </div>
+        <div class="view-text">
+          <a href="#" class="view-link">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

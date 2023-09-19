@@ -1,0 +1,98 @@
+<div class="container">
+  <!-- Page Title -->
+  <div>
+    <div class="title">
+      <h2 class="page-title">Employees</h2>
+      <h3 class="sub-title">Add New Employee</h3>
+
+      <!-- Buttons -->
+      <div class="action-buttons">
+        <button class="add-employee-button">Add Employee</button>
+        <button class="manage-employees-button" (click)="manage()">Manage Employees</button>
+      </div>
+    </div>
+    <div class="add-employee-container">
+      <!-- Employee Form -->
+      <form class="employee-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            [(ngModel)]="employee.fullName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="username"
+            [(ngModel)]="employee.username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="employee.password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input
+            type="date"
+            id="dob"
+            name="birthdate"
+            [(ngModel)]="employee.birthdate"
+          />
+        </div>
+        <div class="four">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              [(ngModel)]="employee.age"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phonenumber"
+              [(ngModel)]="employee.phonenumber"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              [(ngModel)]="employee.address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="education">Education</label>
+            <input
+              type="text"
+              id="education"
+              name="education"
+              [(ngModel)]="employee.education"
+            />
+          </div>
+        </div>
+        <button class="submit-button" (click)="addEmployee()">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="meeting">
+    <app-meeting></app-meeting>
+  </div>
+</div>

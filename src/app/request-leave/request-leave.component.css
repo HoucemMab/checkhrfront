@@ -1,0 +1,107 @@
+/* Reset some default styles for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the overall container */
+.request-leave-container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+  margin-top: 10px;
+}
+
+/* Style for the leave request form container */
+.leave-form {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  width: 650px;
+}
+
+/* Style for form titles and labels */
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Style for form inputs and textarea */
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Style for the submit button */
+.submit-button {
+  background-color: #7445ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.submit-button:hover {
+  background-color: #5e3ccc;
+}
+
+/* Style for the app meeting component container */
+.app-meeting {
+  margin-right: 20px;
+}
+/* ... (previous styles) ... */
+
+/* Style for the submission status box */
+.submission-status {
+  margin-top: 20px;
+}
+
+.status-box {
+  padding: 10px;
+  background-color: #38cb89;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.status-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hide the submission status box by default */
+.submission-status {
+  /* display: none; */
+}

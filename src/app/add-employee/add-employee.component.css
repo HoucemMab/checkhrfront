@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+  margin-top: 10px;
+  display: flex;
+}
+.add-employee-container {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 749px;
+  margin-left: 20px;
+}
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.sub-title {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-right: 400px;
+}
+
+.add-employee-button,
+.manage-employees-button {
+  background-color: #7445ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-employee-button:hover,
+.manage-employees-button:hover {
+  background-color: #5128a7;
+}
+
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-right: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  align-items: flex-start;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #5128a7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2ea772;
+}
+.four {
+  display: flex;
+  flex-wrap: wrap;
+}
+.four > .form-group {
+  flex: 40%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  /*demo*/
+  margin-right: 5%;
+  margin-bottom: 10px;
+}
+.meeting {
+  margin: 20px;
+}

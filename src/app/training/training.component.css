@@ -1,0 +1,163 @@
+/* Styles for Training Container */
+.training {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+  margin-top: 10px;
+}
+
+/* Styles for Training Title */
+.title {
+  color: var(--Tertiary-Color, #161e54);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for Shape Before Training Title */
+.shape {
+  width: 42px;
+  height: 37px;
+  flex-shrink: 0;
+  fill: #5128a7;
+  margin-right: 12px;
+}
+
+/* Styles for Request Training Box */
+.request-training-box {
+  width: 204px;
+  height: 136px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 32px;
+}
+
+/* Styles for Request Training Text */
+.request-training {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Styles for Courses Title */
+.courses-title {
+  color: #252525;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+/* Styles for Training Table Container */
+.table {
+  width: 732px;
+  height: 632px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+/* Styles for Training Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Styles for Training Table Header Row */
+table th {
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  padding: 12px 16px;
+}
+
+/* Styles for Training Table Body Rows */
+table td {
+  border: none;
+  padding: 12px 16px;
+}
+
+/* Styles for Checkbox in Table */
+/* Styles for Custom Checkbox with Checkmark Icon */
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: -1em;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/* Checkmark Icon */
+.checkmark::before {
+  content: "\2713"; /* Unicode checkmark character */
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px; /* Adjust the size of the checkmark */
+  text-align: center;
+  line-height: 18px;
+  color: transparent;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::before {
+  color: #09df2c; /* Color of the checkmark when checked */
+}
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  border: 1px solid #09df2c;
+}
+.sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.app {
+  margin-top: 5%;
+  margin-left: 5em;
+}
+.play-icon {
+  font-size: 24px; /* Adjust the size as needed */
+  margin-right: 8px; /* Add spacing between the icon and text */
+  color: #5128a7; /* Change the color to your desired color */
+  margin-bottom: -5px;
+}

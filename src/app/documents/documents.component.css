@@ -1,0 +1,148 @@
+/* documents.component.css */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+  margin-top: 10px;
+}
+.documents-container {
+  width: 732px;
+  margin: 0;
+  padding: 20px;
+  background-color: #ffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.user-avatar img {
+  width: 147px;
+  height: 146px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  color: #444;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.table-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #7445ff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.download-button {
+  background-color: #5128a7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.download-button:hover {
+  background-color: #5128a7;
+}
+
+.upload-document {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upload-button {
+  background-color: #7445ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.upload-button:hover {
+  background-color: #5128a7;
+}
+
+.upload-message {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #ff6347;
+}
+.meeting {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom button or label */
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5128a7;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style for when the user hovers over the label */
+.custom-file-label:hover {
+  background-color: #2980b9;
+}

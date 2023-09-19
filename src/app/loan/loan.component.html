@@ -1,0 +1,57 @@
+<div class="leaves-container">
+  <div>
+    <h3 class="leave-title">Loans Requests</h3>
+
+    <div *ngFor="let loan of loans" class="leave-box">
+      <table class="leave-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="avatar">
+                <img src="assets/avatar.png" class="image" />
+                <span>{{ loan.user.fullName }} </span>
+              </div>
+            </th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Aprove</th>
+            <th>Decline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rq">Requested a loan</span></td>
+            <td>{{ loan.user.department }}</td>
+            <td>{{ loan.user.status }}</td>
+            <td>{{ loan.amount }}</td>
+            <td>{{ loan.date | date : "MM/dd/yyyy" }}</td>
+            <!-- <td></td> -->
+            <td class="approve">
+              <button
+                class="approve-button"
+                (click)="approveLoan(loan.id_request)"
+              >
+                <i class="fas fa-check-circle"></i>
+                <!-- Font Awesome check-circle icon -->
+              </button>
+            </td>
+            <td class="decline">
+              <button
+                class="decline-button"
+                (click)="declineLoan(loan.id_request)"
+              >
+                <i class="fas fa-times-circle"></i>
+                <!-- Font Awesome times-circle icon -->
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="meeting">
+    <app-meeting></app-meeting>
+  </div>
+</div>

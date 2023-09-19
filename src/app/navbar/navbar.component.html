@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="logo-and-search">
+    <div class="logo"><img src="assets/logochp.png" alt="User Avatar" /></div>
+    <div class="search">
+      <div class="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search"
+          [(ngModel)]="searchInput"
+          (input)="onSearchInputChange()"
+          (focus)="onSearchInputFocus()"
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div
+        class="search-results"
+        *ngIf="showSearchResults && searchResults.length > 0"
+        (mouseover)="onSearchResultsMouseOver()"
+        (mouseout)="onSearchResultsMouseOut()"
+      >
+        <div
+          *ngFor="let searchResult of searchResults"
+          class="notification"
+          (click)="navigateToPage(searchResult.url)"
+        >
+          {{ searchResult.title }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="icons">
+    <div class="notification-icon" (click)="toggleNotifications()">
+      <i class="fa fa-bell"></i>
+      <span class="notification-count">{{ notificationCount }}</span>
+      <div class="notification-dropdown" *ngIf="showNotifications">
+        <div
+          *ngFor="let notification of notifications.reverse()"
+          class="notification"
+        >
+          {{ notification.message }}
+        </div>
+      </div>
+    </div>
+    <div class="user" (click)="toggleUserDropdown()">
+      <img src="assets/6596121.png" alt="User Avatar" />
+      <span class="username">Hi, {{ username }}</span>
+      <div class="user-dropdown" *ngIf="showUserDropdown">
+        <button (click)="logout()">
+          <i class="fa fa-sign-out"></i> Logout
+          <!-- Logout icon and text -->
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

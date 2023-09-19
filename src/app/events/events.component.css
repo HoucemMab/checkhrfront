@@ -1,0 +1,83 @@
+/* Events Container */
+.events-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+  margin-top: 10px;
+}
+
+/* Events List */
+.events-list {
+  flex: 1;
+}
+
+/* Event Box */
+.event-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 732px;
+}
+
+/* Event Header */
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-location {
+  font-weight: 600;
+  color: #161e54;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.event-date {
+  font-weight: 600;
+  font-size: 18px;
+  color: #161e54;
+}
+
+.event-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #7445ff;
+}
+
+/* Event Content */
+.event-content {
+  color: #252525;
+  font-size: 16px;
+  line-height: 1.5;
+  border: solid 1.5px #5128a7;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+/* Meetings Component */
+.meetings {
+}
+
+/* Meeting Time */
+.meeting-time {
+  color: #161e54;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

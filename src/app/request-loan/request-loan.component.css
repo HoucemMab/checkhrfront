@@ -1,0 +1,124 @@
+.request-loan {
+  padding: 20px;
+  margin-top: 10px;
+  position: relative; /* Required for the shape positioning */
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--Tertiary-Color, #161e54);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Poppins;
+  display: flex;
+  align-items: center; /* Align shape vertically with the title */
+  margin-top: -10px;
+}
+
+.shape {
+  width: 25.243px;
+  height: 25.243px;
+  transform: rotate(-179.458deg);
+  flex-shrink: 0;
+  fill: #5128a7;
+  margin-right: 10px; /* Add spacing between shape and title */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.left {
+  flex: 1;
+  background-color: #fff;
+  padding: 21px 32px 13px 30px;
+  width: max-content;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  height: max-content;
+  margin-right: 20px;
+}
+
+.input-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 21px 32px 13px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  width: 612px;
+  margin-left: 5em;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.submit-button {
+  background-color: #7445ff; /* Button color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Add spacing from input boxes */
+  width: 86px;
+  height: 29px;
+  transition: background-color 0.3s; /* Add smooth transition */
+}
+.submit-button:hover {
+  background-color: #5c39d0; /* New color on hover */
+}
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 5em;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+}
+/* Styling for the message box */
+.message-box {
+  background-color: #2ecc71; /* Green background color */
+  color: #ffffff; /* White text color */
+  padding: 10px; /* Padding around the message */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 10px; /* Margin to separate it from other elements */
+  text-align: center; /* Center-align text */
+  width: 150px;
+  font-size: 16px; /* Font size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+  margin-left: 35%;
+}
+
+/* Animation for showing/hiding the message box */
+.message-box.ng-leave,
+.message-box.ng-enter {
+  opacity: 0;
+}
+.message-box.ng-leave-active,
+.message-box.ng-enter-active {
+  opacity: 1;
+}

@@ -1,0 +1,146 @@
+/* Container */
+.request-training-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    35deg,
+    rgba(251, 251, 251, 1) 66%,
+    rgba(203, 213, 225, 1) 100%,
+    rgba(116, 69, 255, 1) 100%
+  );
+}
+
+/* Left Section */
+.left-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin-right: 20px;
+  height: 50%;
+}
+
+.title {
+  color: #161e54;
+  font-family: Poppins;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  display: block;
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #161e54;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  display: inline-flex;
+  padding: 15px 40px;
+  background-color: #7445ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 75%;
+}
+
+.submit-button:hover {
+  background-color: #5128a7;
+}
+
+/* Right Section */
+.right-section {
+  margin-right: 10px;
+  width: auto;
+}
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--Tertiary-Color, #161e54);
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Poppins;
+  display: flex;
+  align-items: center; /* Align shape vertically with the title */
+  margin-top: -10px;
+}
+
+.shape {
+  width: 25.243px;
+  height: 25.243px;
+  transform: rotate(-179.458deg);
+  flex-shrink: 0;
+  fill: #5128a7;
+  margin-right: 10px; /* Add spacing between shape and title */
+}
+
+.container {
+  display: flex;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.button {
+  width: 100%;
+}
+/* Styling for the message box */
+.message-box {
+  background-color: #2ecc71; /* Green background color */
+  color: #ffffff; /* White text color */
+  padding: 10px; /* Padding around the message */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 10px; /* Margin to separate it from other elements */
+  text-align: center; /* Center-align text */
+  font-size: 16px; /* Font size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+/* Animation for showing/hiding the message box */
+.message-box.ng-leave,
+.message-box.ng-enter {
+  opacity: 0;
+}
+.message-box.ng-leave-active,
+.message-box.ng-enter-active {
+  opacity: 1;
+}

@@ -1,0 +1,58 @@
+<div class="request-training-container">
+  <!-- Left Section with Training Request Inputs -->
+  <div class="title-container">
+    <div class="shape">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="27"
+        height="27"
+        viewBox="0 0 27 27"
+        fill="none"
+      >
+        <path
+          d="M26.1534 23.207C26.1369 24.9496 24.7109 26.3489 22.9682 26.3325L4.0365 26.1534C2.29389 26.1369 0.894581 24.7109 0.911065 22.9682L1.09014 4.0365C1.10663 2.29388 2.53266 0.894579 4.27528 0.911063L23.207 1.09014C24.9496 1.10663 26.3489 2.53266 26.3325 4.27528L26.1534 23.207Z"
+          fill="#5128A7"
+        />
+        <path
+          d="M13.3433 8.6651C13.79 8.23026 14.2973 8.13662 14.8651 8.38417C15.433 8.63171 15.7145 9.06789 15.7095 9.69269L15.6419 16.8325C15.636 17.4564 15.3464 17.8872 14.773 18.1248C14.1996 18.3625 13.6942 18.2593 13.2568 17.8152L9.65749 14.1762C9.51905 14.0363 9.41567 13.8851 9.34732 13.7227C9.27898 13.5603 9.24568 13.3866 9.24743 13.2018C9.24918 13.0169 9.28576 12.844 9.35716 12.6829C9.42856 12.5218 9.53479 12.3726 9.67585 12.2353L13.3433 8.6651Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+
+    <!-- Title of the page -->
+    <h2 class="title">Request Loan</h2>
+  </div>
+  <div class="main-content">
+    <div class="left-section">
+      <h2 class="title">Request Training</h2>
+      <div class="input-container">
+        <label for="courseName">Course Name</label>
+        <input type="text" id="courseName" [(ngModel)]="courseName" />
+      </div>
+      <div class="input-container">
+        <label for="maxHours">Number of chapters</label>
+        <input type="number" id="maxHours" [(ngModel)]="maxHours" />
+      </div>
+      <div class="input-container">
+        <label for="objective">Course size</label>
+        <textarea id="objective" [(ngModel)]="objective"></textarea>
+      </div>
+      <div class="input-container">
+        <label for="specifications">Specifications</label>
+        <textarea id="specifications" [(ngModel)]="specifications"></textarea>
+      </div>
+      <div class="button">
+        <button class="submit-button" (click)="submitTrainingRequest()">
+          Submit
+        </button>
+      </div>
+      <div class="message-box" *ngIf="message" [@fadeInOut]>{{ message }}</div>
+    </div>
+    <!-- Right Section with Meetings Component -->
+    <div class="right-section">
+      <app-meeting></app-meeting>
+      <!-- Assuming 'app-meeting' is your Meetings component -->
+    </div>
+  </div>
+</div>

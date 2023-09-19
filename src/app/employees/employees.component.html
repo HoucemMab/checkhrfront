@@ -1,0 +1,73 @@
+<div class="employees-container">
+  <h2 class="page-title">All Employees</h2>
+  <div class="employee-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Department</th>
+          <th>Age</th>
+          <th>Active</th>
+          <th>Status</th>
+          <th>Delete</th>
+          <th>Rating</th>
+          <th>Bonus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.fullName }}</td>
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.age }}</td>
+          <td>
+            <span class="inactive-mark"></span>
+          </td>
+          <td>
+            <select
+              [(ngModel)]="employee.status"
+              (change)="updateEmployeeStatus(employee.id_user)"
+            >
+              <option class="permanent-option" value="PERMANENT">
+                PERMANENT
+              </option>
+              <option class="contract-option" value="CONTRACT">CONTRACT</option>
+              <option class="trainee-option" value="TRAINEE">TRAINEE</option>
+              <option class="in-process-option" value="IN_PROCESS">
+                IN_PROCESS
+              </option>
+              <option class="on-leave-option" value="ON_LEAVE">ON_LEAVE</option>
+            </select>
+          </td>
+
+          <td>
+            <button
+              class="delete-button"
+              (click)="deleteEmployee(employee.id_user)"
+            >
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+          <td>
+            <span class="rating-stars">
+              <i
+                class="fa fa-star"
+                *ngFor="let _ of [1, 2, 3, 4, 5]; let index = index"
+                [class.filled]="index < selectedRating[employee.id_user]"
+                (click)="rateEmployee(index, employee.id_user)"
+              ></i>
+            </span>
+          </td>
+          <td>
+            <span
+              class="checkmark"
+              [ngClass]="{ red: isCheckmarkRed }"
+              (click)="toggleCheckmarkColor()"
+            >
+              <i class="fa fa-check"></i>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

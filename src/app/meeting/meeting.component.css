@@ -1,0 +1,144 @@
+/* Styles for the Meeting component container */
+.meeting-container {
+  display: flex;
+
+  height: auto;
+}
+
+/* Styles for the sidebar */
+.sidebar {
+  width: 360px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Styles for the agenda section */
+.agenda {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.agenda-header {
+  display: flex;
+  align-items: center;
+}
+
+.agenda-color {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(90deg, #5128a7, #ffffff);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.agenda-title {
+  color: #252525;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Styles for the "Schedule" title */
+.schedule-title {
+  color: #252525;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+/* Styles for the meeting list and cards */
+.meeting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.meeting-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.meeting-title {
+  color: #444;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.meeting-hours {
+  color: #5128a7;
+}
+
+.meeting-description {
+  margin-bottom: 10px;
+  color: #909090;
+  font-feature-settings: "salt" on, "liga" off;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Styles for the "View" link with hover effect */
+.view-link {
+  color: #5128a7;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.view-link:hover {
+  color: #2566ff;
+  text-decoration: underline;
+}
+
+.calendar-container {
+  width: 100%; /* Set the desired width */
+  height: 400px; /* Set the desired height */
+  border: 1px solid #ddd; /* Add a border for clarity */
+}
+
+/* Style the full-calendar component */
+full-calendar {
+  width: 100%; /* Make sure it takes up the entire width of the container */
+  height: 100%; /* Make sure it takes up the entire height of the container */
+}
+.fc-event {
+  /* Style for individual events */
+  background-color: #5128a7; /* Event background color */
+  color: #fff; /* Event text color */
+  border: none; /* Event border */
+}
+.fc-header-toolbar {
+  background-color: #333; /* Header background color */
+  color: #fff; /* Header text color */
+}
+.fc-button {
+  background-color: #4a90e2; /* Button background color */
+  color: #fff; /* Button text color */
+}
