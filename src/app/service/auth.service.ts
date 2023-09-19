@@ -11,11 +11,12 @@ export class AuthService {
     const token: any = localStorage.getItem('token');
     return token;
   }
-  hasRole(role: string) {
+  hasRole(role: any) {
     const token: any = localStorage.getItem('token');
     const decodedToken: any = jwtDecode(token);
     const decodedRole: string = decodedToken.role;
-    return decodedRole === role;
+    console.log('role', decodedRole, 'must be ', role);
+    return role.includes(decodedRole);
   }
   logout() {
     localStorage.removeItem('token');

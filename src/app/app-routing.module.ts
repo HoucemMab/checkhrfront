@@ -111,7 +111,7 @@ const routes: Routes = [
     path: 'admin-event',
     component: AdminEventsComponent,
     canActivate: [RoleGuard],
-    data: { expectedRoles: ['ADMIN'] }, // Use quotes
+    data: { expectedRoles: ['ADMIN', 'CHIEF'] }, // Use quotes
   },
   {
     path: 'employees',

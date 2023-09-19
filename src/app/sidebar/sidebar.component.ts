@@ -42,7 +42,7 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Employees',
       iconClass: 'fas fa-briefcase',
-      url: '/dashboard',
+      url: '/employee-list',
     },
     {
       title: 'Loans',
