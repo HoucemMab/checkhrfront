@@ -10,15 +10,15 @@
     <div class="login-inputs">
       <input
         type="email"
-        placeholder="email"
-        [(ngModel)]="username"
+        placeholder="Email"
+        [(ngModel)]="email"
+        name="email"
         required
-        #email="ngModel"
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
       />
       <input type="password" placeholder="Password" [(ngModel)]="password" />
     </div>
-
+    <div class="" *ngIf="this.errorMessage.length > 0">invalid</div>
     <div class="login-options">
       <div class="remember-me">
         <input type="checkbox" id="remember" />
