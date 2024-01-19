@@ -14,8 +14,12 @@ export class SidebarComponent implements OnInit {
     console.log(decodedToken);
     if (decodedToken.role === 'EMPLOYEE') {
       this.pages = this.userpages;
-    } else {
+    }
+    if (decodedToken.role === 'ADMIN') {
       this.pages = this.adminpages;
+    }
+    if (decodedToken.role === 'CHIEF') {
+      this.pages = this.chiefpages;
     }
   }
   userpages = [
@@ -42,7 +46,7 @@ export class SidebarComponent implements OnInit {
     {
       title: 'Employees',
       iconClass: 'fas fa-briefcase',
-      url: '/employee-list',
+      url: '/addEmployee',
     },
     {
       title: 'Loans',
@@ -57,5 +61,23 @@ export class SidebarComponent implements OnInit {
       url: '/trainings',
     },
     { title: 'Documents', iconClass: 'far fa-file-alt', url: '/employee-list' },
+  ];
+
+  chiefpages = [
+    { title: 'Dashboard', iconClass: 'fas fa-home', url: '/dashboard' },
+
+    { title: 'Leaves', iconClass: 'fas fa-bed', url: '/leaves' },
+    {
+      title: 'Employees',
+      iconClass: 'fas fa-briefcase',
+      url: '/employee-list',
+    },
+
+    { title: 'Notes', iconClass: 'fas fa-sticky-note', url: '/note' },
+    {
+      title: 'Training',
+      iconClass: 'fas fa-chalkboard-teacher',
+      url: '/trainings',
+    },
   ];
 }

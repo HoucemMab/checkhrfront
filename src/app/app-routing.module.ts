@@ -50,8 +50,8 @@ const routes: Routes = [
   {
     path: 'trainings',
     component: TrainingComponent,
-    canActivate: [RoleGuard],
-    data: { expectedRoles: ['ADMIN', 'CHIEF'] }, // Use quotes
+    // canActivate: [RoleGuard],
+    // data: { expectedRoles: ['ADMIN', 'CHIEF'] }, // Use quotes
   },
   {
     path: 'request-training',
